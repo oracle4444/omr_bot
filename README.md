@@ -2,25 +2,28 @@
 Telegram bot for optical music recognition.
 
 ## Instruction
-Download docker image:
+
+1. Get bot token from BotFather and save it in a file (for example "token").
+
+2. Download docker image:
 ```
 docker pull oracle4444/omr_bot
 ```
 
-Run docker container:
+3. Run docker container:
 ```
-docker run oracle4444/omr_bot
+docker run --mount type=bind,source=/path/to/token/dir,target=/home/token_dir oracle4444/omr_bot token_dir/token
 ```
 
 ## Example
 <audio src="audio.mp3" controls preload></audio>
-You send to the bot:
+You send to the bot (no compression):
 
 <img src="https://github.com/oracle4444/omr_bot/blob/main/omr_example.png"  width="547" height="691">
 
 The bot send to you (in .ogg format):
 
-https://user-images.githubusercontent.com/83769750/236894681-9d5b317b-e89b-4442-b012-f07c95354b2e.mp4
+https://github.com/oracle4444/omr_bot/assets/83769750/ade31b68-2c0f-4111-8c1a-ee019b90cb38
 
 ## Citation
 Neural network for optical music recognition.
